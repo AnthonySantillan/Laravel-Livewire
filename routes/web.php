@@ -15,7 +15,7 @@ use App\Http\Livewire\Posts;
 */
 
 Route::get('/', function () {
-//    auth()->user()->assignRole('admin');
+//  auth()->user()->assignRole('admin');
     return view('welcome');
 });
 
@@ -25,6 +25,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
+
         return view('dashboard');
     })->name('dashboard');
 });
